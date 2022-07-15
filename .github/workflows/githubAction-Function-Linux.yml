@@ -1,12 +1,14 @@
-name: Deploy DotNet project to function app with a Windows environment
+name: LuckyNumber
 
 on:
-  [push]
+  push:
+    paths:
+      - 'src/**'
 
 env:
-  AZURE_FUNCTIONAPP_NAME: func-luckynumber-dev  # set this to your application's name
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'src'    # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '6.0.301'              # set this to the dotnet version to use
+  AZURE_FUNCTIONAPP_NAME: func-luckynumber-dev
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: 'src'
+  DOTNET_VERSION: '6.0.301'
 
 jobs:
   build-and-deploy:
