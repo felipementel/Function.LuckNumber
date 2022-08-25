@@ -5,8 +5,7 @@ on:
     branches:    
       - main
       - 'releases/**'
-    branches-ignore:    
-      - 'test/**'      
+      - '!test/**'      
   push:
     branches:    
       - main
